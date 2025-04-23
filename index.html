@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance | HenryConsulting.fr</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: black;
+      color: white;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    
+    .maintenance-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Decorative lines */
+    .decorative-lines {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    
+    .horizontal-line-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255, 193, 7, 0.7), transparent);
+    }
+    
+    .horizontal-line-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255, 193, 7, 0.7), transparent);
+    }
+    
+    .vertical-line-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 193, 7, 0.7), transparent);
+    }
+    
+    .vertical-line-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 193, 7, 0.7), transparent);
+    }
+    
+    /* Diagonal lines */
+    .diagonal-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .diagonal-line-left {
+      position: absolute;
+      top: 0;
+      left: 25%;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255, 193, 7, 0.1);
+      transform: rotate(45deg);
+      transform-origin: top;
+    }
+    
+    .diagonal-line-right {
+      position: absolute;
+      top: 0;
+      right: 25%;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255, 193, 7, 0.1);
+      transform: rotate(-45deg);
+      transform-origin: top;
+    }
+    
+    /* Content */
+    .content {
+      z-index: 10;
+      text-align: center;
+      padding: 0 1.5rem;
+      max-width: 36rem;
+    }
+    
+    .title {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    
+    .subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+    
+    /* Animated maintenance icons */
+    .maintenance-icons {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .cog-icon {
+      color: rgba(255, 193, 7, 0.8);
+      width: 32px;
+      height: 32px;
+      animation: spin 10s linear infinite;
+    }
+    
+    .settings-icon {
+      color: rgba(255, 193, 7, 0.8);
+      width: 28px;
+      height: 28px;
+      animation: spin-reverse 14s linear infinite;
+    }
+    
+    /* Footer */
+    .footer {
+      position: absolute;
+      bottom: 2rem;
+      color: rgba(255, 193, 7, 0.5);
+      font-size: 0.875rem;
+    }
+    
+    /* Animations */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spin-reverse {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+    
+    /* Responsive */
+    @media (min-width: 768px) {
+      .title {
+        font-size: 1.875rem;
+      }
+      
+      .subtitle {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="maintenance-page">
+    <!-- Decorative lines -->
+    <div class="decorative-lines">
+      <div class="horizontal-line-top"></div>
+      <div class="horizontal-line-bottom"></div>
+      <div class="vertical-line-left"></div>
+      <div class="vertical-line-right"></div>
+      
+      <!-- Diagonal lines -->
+      <div class="diagonal-lines">
+        <div class="diagonal-line-left"></div>
+        <div class="diagonal-line-right"></div>
+      </div>
+    </div>
+    
+    <!-- Content -->
+    <div class="content">
+      <h1 class="title">Nous effectuons actuellement une maintenance.</h1>
+      <p class="subtitle">Nous serons de retour très bientôt.</p>
+      
+      <!-- Animated maintenance icons -->
+      <div class="maintenance-icons">
+        <!-- Cog icon -->
+        <svg class="cog-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+          <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+          <path d="M12 2v2"></path>
+          <path d="M12 22v-2"></path>
+          <path d="m17 20.66-1-1.73"></path>
+          <path d="M11 10.27 7 3.34"></path>
+          <path d="m20.66 17-1.73-1"></path>
+          <path d="m3.34 7 1.73 1"></path>
+          <path d="M14 12h8"></path>
+          <path d="M2 12h2"></path>
+          <path d="m20.66 7-1.73 1"></path>
+          <path d="m3.34 17 1.73-1"></path>
+          <path d="m17 3.34-1 1.73"></path>
+          <path d="m7 20.66-1-1.73"></path>
+        </svg>
+        
+        <!-- Settings icon -->
+        <svg class="settings-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">HenryConsulting.fr</div>
+  </div>
+</body>
+</html>
